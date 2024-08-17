@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import Movie from '../models/Movie';
 import mongoose from 'mongoose';
 export const addMovie = async(req,res,next)=>{
-     const extractedToken = req.headers.authorization.split(" ")[1];
+     const extractedToken = req.headers.authorization.split(" ")[1]; // brr token
      if (!extractedToken && extractedToken.trim()===""){
         return res.status(404).json({message:"Token Not Found"})
      }
